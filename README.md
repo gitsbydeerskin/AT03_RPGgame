@@ -97,11 +97,11 @@ In order to properly commit, you should ALWAYS pull origin so you have your team
 ### Commit naming convention
 #### Summary
 For making commits, the naming conventions in which you should be doing is:
-- 'mod' for when you are making a change to the code or are adding in new code
-- 'fix' for when a bug is being fixed
-- 'file_Change' for when filed are manipulated(added/removed, moved around etc.)
-- 'refactor' for when you improve the code but without changing how it works
-- 'ui' for when you are manipulating UI elements(add/remove, move around, modify etc.)
+- `mod`: for when you are making a change to the code or are adding in new code
+- `fix`: for when a bug is being fixed
+- `file_Change` for when filed are manipulated(added/removed, moved around etc.)
+- `refactor`: for when you improve the code but without changing how it works
+- `ui`: for when you are manipulating UI elements(add/remove, move around, modify etc.)
 #### Description
 The description for commits should be detailed, explaining what the purpose of the commit is and what the commit contains (specifics, aka a change to this specific code or this specific UI element).
 
