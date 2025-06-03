@@ -80,13 +80,13 @@ This section covers practices such as branch naming conventions, file structure,
 All branches should follow the camel casing for the name of the branch. Also, ensure you use descriptive names with no abbreviation, otherwise it may be hard to identify.
 
 For branches that focus on features, the branch naming convention should be:
-- 'feature/Feature-Name'<br>
+- `feature/Feature-Name`<br>
 
 For branches that focus on bug fixing, the branch naming convention should be:
-- 'bugfix/ErrorName'<br>
+- `bugfix/ErrorName`<br>
 
 For branches that express a release version change, the branch naming convention should be:
--'version/VersionNumber'<br>
+-`version/VersionNumber`<br>
 ### File Structure
 When structuring your files, keep it clear and simple, ensuring the structure makes sense to both yourself and your teammates. All files should be stored either on the GitHub repository, or on a company device.
 ### Commit Directions
@@ -108,9 +108,9 @@ The description for commits should be detailed, explaining what the purpose of t
 
 ### Other File Naming Conventions
 Other file naming conventions involve:
-- For models, you should use pascal case and use the m_ suffix. Give it a clear name and then state the version it is. Finally, separate the suffix, name and version with underscores. An example as to how this would play out is: m_barrel_v2.mb
-- For textures, you shoud use pascal case and use the tex_ suffix. Give it a descriptive name outlining what it is and what version it is. You should also separate the suffix, name and version with underscores. An example as to how this would play out is: tex_barrel_v2.png
-- For unity projects, camel case should be used, with the name of the file generally being the name of the game. An example of this would be: RolePlayingGame file
+- For models, you should use pascal case and use the `m_` suffix. Give it a clear name and then state the version it is. Finally, separate the suffix, name and version with underscores. An example as to how this would play out is: `m_barrel_v2.mb`
+- For textures, you shoud use pascal case and use the `tex_` suffix. Give it a descriptive name outlining what it is and what version it is. You should also separate the suffix, name and version with underscores. An example as to how this would play out is: `tex_barrel_v2.png`
+- For unity projects, camel case should be used, with the name of the file generally being the name of the game. An example of this would be: `RolePlayingGame` file
 
 
 
