@@ -94,6 +94,18 @@ When committing, you have to ensure you do it correctly in order to avoid merge 
 
 In order to properly commit, you should ALWAYS pull origin so you have your teammates most recent work. Once you have done that, stage the recorded changes to change only what you need. Once you have done that, name the commit into something meaningful that summarizes the purpose of the commit, that way it can help teammates understand what the commit is for. Once you have done that, you can then commit the changes into the branch.
 
+### Commit naming convention
+#### Summary
+For making commits, the naming conventions in which you should be doing is:
+- 'mod' for when you are making a change to the code or are adding in new code
+- 'fix' for when a bug is being fixed
+- 'file_Change' for when filed are manipulated(added/removed, moved around etc.)
+- 'refactor' for when you improve the code but without changing how it works
+- 'ui' for when you are manipulating UI elements(add/remove, move around, modify etc.)
+#### Description
+The description for commits should be detailed, explaining what the purpose of the commit is and what the commit contains (specifics, aka a change to this specific code or this specific UI element).
+
+
 ### Other File Naming Conventions
 Other file naming conventions involve:
 - For models, you should use pascal case and use the m_ suffix. Give it a clear name and then state the version it is. Finally, separate the suffix, name and version with underscores. An example as to how this would play out is: m_barrel_v2.mb
