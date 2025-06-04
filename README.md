@@ -17,58 +17,58 @@ With this project we are aiming to create a small but feature-complete game prot
 | Elijah        | Main Menu, Saving Systems     |
 | Bri           | Dialogue, Respawn, Stats & Levelling     |
 
-Note: A more detailed breakdown of each feature is available further down in this document. 
+Note: A more detailed breakdown of each feature is available below: 
 
 ## Project Features
 
-This section will contain the list of features that will be implomented our RPG.
+### This section contains the full list of features that will be implemented in our RPG.
 
-### Menu & Options
+#### Menu & Options
  - the Main menu will allow the player to start a new game, load saved games, options and exit.
  - the options menu will allow the player to adjust sound settings, graphics and keybinds. 
 
 
-### Stats & Leveling 
- - The player will have stats such as health, experience points and level.
+#### Stats & Leveling 
+ - the player will have stats such as health, experience points and level.
  - the leveling system will improve starts as the player advances.
 
 
-### Dialogue System
- - Players can read through text based responses and make chices that 
-- Dialogue options will trigger different responses or actions on player decisions. 
+#### Dialogue System
+ - players can read through text based responses and make chices that 
+- dialogue options will trigger different responses or actions on player decisions. 
 
 
-### interaction
+#### Interaction
 - the player can interact with NPC's and objects thorugh simple prompts.
 -interactions will trigger actions such as opening doors, picking up items and starting a dialogue.
-- The interaction system
+- the interaction system
 
 
-### Saving & Loading: Options & Stats 
+#### Saving & Loading: Options & Stats 
 
-#### Options:
- - The RPG options menu will allow the the player to save their menu preferences, sound settings, graphics and key binds.
- - These settings will save across sessions and will automaticly load when the game starts.
-- The system will store these preferences in a JSON file, enabling retieval and modifications.
-#### Stats: 
+##### Options:
+ - the RPG options menu will allow the the player to save their menu preferences, sound settings, graphics and key binds.
+ - these settings will save across sessions and will automaticly load when the game starts.
+- the system will store these preferences in a JSON file, enabling retieval and modifications.
+##### Stats: 
  - the stats will save during the game save process.
- - Player stats will automaticly save during the gameplay.
+ - player stats will automaticly save during the gameplay.
  - stats will be stored in a file for easy management and retrieval when the games is loading.
  - the players position, rotation and other transform related data will be saved when the game is saved.
  - when the save is loaded the player will be returned to their exact lost location and state.
   
 
-### Player Movement & Respawn
+#### Player Movement & Respawn
 
-#### Movement:
-- The player can move freely within the game world using WASD.
+##### Movement:
+- the player can move freely within the game world using WASD.
 - the player can change speeds between crouching and sprinting.
-- Movement is smooth and responsive, with a simple collision detection system to prevent the player from passing through opjects.
-#### Respawn:
-- When the player dies, that will respawn at a predefined location, such as a checkpoint or starting area.
-- Respawn will restore the player's health to a default value.
-- The respawn system will include a short delay before the player respawns to avoid instant re-engagement after death.
-- The Game will provide a visual or audio cue to indicate the respawn event, ensuring the player is aware of their return to the game.
+- movement is smooth and responsive, with a simple collision detection system to prevent the player from passing through opjects.
+##### Respawn:
+- when the player dies, that will respawn at a predefined location, such as a checkpoint or starting area.
+- respawn will restore the player's health to a default value.
+- the respawn system will include a short delay before the player respawns to avoid instant re-engagement after death.
+- the Game will provide a visual or audio cue to indicate the respawn event, ensuring the player is aware of their return to the game.
 - player stats, including XP and level, will remain intact upon respawn maintaining the players progression.
 
 
@@ -94,7 +94,7 @@ When committing, you have to ensure you do it correctly in order to avoid merge 
 
 In order to properly commit, you should ALWAYS pull origin so you have your teammates most recent work. Once you have done that, stage the recorded changes to change only what you need. Once you have done that, name the commit into something meaningful that summarizes the purpose of the commit, that way it can help teammates understand what the commit is for. Once you have done that, you can then commit the changes into the branch.
 
-### Commit naming convention
+### Commit Naming Convention
 #### Summary
 For making commits, the naming conventions in which you should be doing is:
 - `mod`: for when you are making a change to the code or are adding in new code
@@ -105,12 +105,14 @@ For making commits, the naming conventions in which you should be doing is:
 #### Description
 The description for commits should be detailed, explaining what the purpose of the commit is and what the commit contains (specifics, aka a change to this specific code or this specific UI element).
 
-
 ### Other File Naming Conventions
 Other file naming conventions involve:
 - For models, you should use pascal case and use the `m_` suffix. Give it a clear name and then state the version it is. Finally, separate the suffix, name and version with underscores. An example as to how this would play out is: `m_barrel_v2.mb`
 - For textures, you shoud use pascal case and use the `tex_` suffix. Give it a descriptive name outlining what it is and what version it is. You should also separate the suffix, name and version with underscores. An example as to how this would play out is: `tex_barrel_v2.png`
 - For unity projects, camel case should be used, with the name of the file generally being the name of the game. An example of this would be: `RolePlayingGame` file
 
+###### Changelong 
+* 3/06/2025: Eli & Ethan - Eli added the 'Project Features' section. Ethan updated the 'Technical Specifications' to include Commit guidelines. 
+* 4/06/2025 @ 5:30PM : Bri - minor adjustments to formatting and grammatical/spelling fixes in the "Project Features" section. Creation of this Changelog section. Edited 'Commit naming convention' > 'Commit Naming Convention'. Edit to the project features section to make all points lower-case to make them uniform (some were uppercase, some were lowercase).  
 
 
