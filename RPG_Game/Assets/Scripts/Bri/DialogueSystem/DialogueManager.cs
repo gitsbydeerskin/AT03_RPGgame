@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class DialogueManager : MonoBehaviour
 {
     // Here we are using a Singleton because we want DialogueManager to be the ONLY one of its kind to run
