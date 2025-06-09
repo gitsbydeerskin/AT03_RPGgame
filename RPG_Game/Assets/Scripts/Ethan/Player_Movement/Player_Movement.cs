@@ -28,11 +28,11 @@ public class Player_Movement : MonoBehaviour
     private void Awake()
     {
         //stores the charactercontrolelr component into a variable
-        _characterController = GetComponent<_characterController>();
+        _characterController = GetComponent<CharacterController>();
         //stores the playerhandler component into the variable
-        playerHandler = GetComponent<playerHandler>();
+        playerHandler = GetComponent<PlayerHandler>();
         //find the component with the game manager taf and then stores the UImanager in the variable
-        uiManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<uiManager>();
+        uiManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<UIManager>();
     }
 
 
@@ -96,13 +96,13 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKey(KeybindManager.keys["Sprint"]) && playerHandler.playerData.stamina.currentValue > 0 && isMoving)
         {
             //if they are, then they start to move at the speed of running
-            _movmentSpeed = _run;
+            _movementSpeed = _run;
             //decreases the stamina by 1 per second
             playerHandler.playerData.stamina.currentValue -= 1 * Time.deltaTime;
             //updates the stamina bar
             uiManager.UpdateUI(uiManager.staminaBar,
-                playerHandler.playerData.stmina.currentValue,
-                playerHandler.playerData.stmina.maxValue);
+                playerHandler.playerData.stamina.currentValue,
+                playerHandler.playerData.stamina.maxValue);
             //makes it so that the player cannot regen
             canRegen = false;
             //sets the timer for which the player can regen to 0
@@ -162,7 +162,7 @@ public class Player_Movement : MonoBehaviour
                     isMoving = true;
                 }
                 //checks to see if the player pressed the button that makes them move forward
-                else if (newInput.GetKey(KeybindManager.Keys["Forward"]))
+                else if (Input.GetKey(KeybindManager.Keys["Forward"]))
                 {
                     //makes the player move forward
                     newInput.y = 1;
@@ -183,7 +183,7 @@ public class Player_Movement : MonoBehaviour
                 //adjusts movement direction according to the movement speed of the player
                 _moveDirection *= _movementSpeed;
                 //checks to see if the player wants to jump
-                if (newInput.GetKey(KeybindManager.Keys["Jump"]))
+                if (Input.GetKey(KeybindManager.Keys["Jump"]))
                 {
                     //makes the player jump
                     _moveDirection.y = _jump;
