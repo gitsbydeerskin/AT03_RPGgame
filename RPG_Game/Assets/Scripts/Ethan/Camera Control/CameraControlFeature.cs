@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.Profiling;
 
+//attach to player, add each object to their respective spots 
+
 public class CameraControlFeature : MonoBehaviour
 {
+    #region Variables
     //The variable for the sensitivity of camera movement, aka how fast the camera moves when you move the mouse around
     [Header("Sensitivity Settings")]
     public static float sensitivity = 15;
@@ -42,6 +45,8 @@ public class CameraControlFeature : MonoBehaviour
     //This stores the rotation that actually gets applied to the camera
     float verticalRotation;
     //This handles looking around using the camera
+    #endregion
+    #region Functions
     void HandleMouseLook()
     {
         //This makes it so that the camera moves left and right when you move the mouse left and right
@@ -79,6 +84,8 @@ public class CameraControlFeature : MonoBehaviour
         //This makes it so that the FOV(Field Of View) changes when you zoom out, and lower FOV when zoomed in
         playerCamera.GetComponent<Camera>().fieldOfView = Mathf.Lerp(40, 80, currentZoom / maxZoom);
     }
+    #endregion
+    #region Unity Callback
     // Update is called once per frame
     void Update()
     {
@@ -86,5 +93,6 @@ public class CameraControlFeature : MonoBehaviour
         HandleMouseLook();
         //This calls on the HandleZoom function every frame
         HandleZoom();
+        #endregion
     }
 }
