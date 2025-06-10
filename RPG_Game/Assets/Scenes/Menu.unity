@@ -1984,7 +1984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &452208773
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3188,7 +3188,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
@@ -4479,7 +4479,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 959486344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1812951617}
+        m_TargetAssemblyTypeName: KeybindManager, Assembly-CSharp
+        m_MethodName: ChangeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 959486341}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &959486344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8059,6 +8071,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff46842939451c4ab63b48943692dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _actionMapData:
+  - actionName: MoveForward
+    keycodeDisplay: {fileID: 660261765}
+    defultkey: W
+  - actionName: MoveBackward
+    keycodeDisplay: {fileID: 164457033}
+    defultkey: S
+  - actionName: MoveLeft
+    keycodeDisplay: {fileID: 164457033}
+    defultkey: A
+  - actionName: MoveRight
+    keycodeDisplay: {fileID: 164457033}
+    defultkey: D
+  - actionName: Jump
+    keycodeDisplay: {fileID: 1100783921}
+    defultkey: Space
+  - actionName: Sprint
+    keycodeDisplay: {fileID: 695718227}
+    defultkey: LeftShift
+  - actionName: Crouch
+    keycodeDisplay: {fileID: 1288371011}
+    defultkey: C
+  - actionName: Interact
+    keycodeDisplay: {fileID: 1054473187}
+    defultkey: E
+  - actionName: Pause
+    keycodeDisplay: {fileID: 1917540732}
+    defultkey: Escape
+  _currentSelectedKey: {fileID: 0}
+  _selectedKey:
+    serializedVersion: 2
+    rgba: 3777262831
+  _changedKey:
+    serializedVersion: 2
+    rgba: 3791235879
 --- !u!1 &1869392611
 GameObject:
   m_ObjectHideFlags: 0
