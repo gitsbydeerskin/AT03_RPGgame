@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+// This script allows select player stats to update the UI in real-time 
 public class UIManager : MonoBehaviour
 {
     public Image healthBar;
