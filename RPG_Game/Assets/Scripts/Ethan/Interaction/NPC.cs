@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
             {
-                toolTip = $"Press {KeybindManager.Keys["Interact"].ToString()} to interact";
+//                toolTip = $"Press {KeybindManager.Keys["Interact"].ToString()} to interact";
             }
     #endregion
     #region functions

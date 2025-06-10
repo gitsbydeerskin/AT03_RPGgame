@@ -24,7 +24,8 @@ public class Interact : MonoBehaviour
                 toolTip.text = displayToolTip.ToolTip();
             }
             //checks to see if the interaction button was pressed
-            if (Input.GetKeyDown(KeybindManager.Keys["Interact"]))
+            //if (Input.GetKeyDown(KeybindManager.Keys["Interact"]))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 //checks to see if the interact script is attached to the object 
                 if (hitInfo.collider.TryGetComponent<IInteractable>(out IInteractable interact))
