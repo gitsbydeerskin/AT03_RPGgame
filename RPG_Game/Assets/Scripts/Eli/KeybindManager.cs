@@ -19,7 +19,7 @@ public class KeybindManager : MonoBehaviour
     [SerializeField] ActionMapData[] _actionMapData;
     [Header("UI Feedback")]
     [SerializeField] GameObject _currentSelectedKey;
-    public static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
+    public static Dictionary<string, KeyCode> Keys = new Dictionary<string, KeyCode>();
 
     [SerializeField] private Color32 _selectedKey = new Color32(239, 116, 36, 225);
     [SerializeField] private Color32 _changedKey = new Color32(39, 171, 249, 225);
@@ -28,12 +28,12 @@ public class KeybindManager : MonoBehaviour
 
     public void SetUpLoadedKey(string[] key, string[] value)
     {
-        keys.Clear();
+        Keys.Clear();
 
         for (int i = 0; i < key.Length; i++)
         {
             // keys.Add(key[i], (KeyCode)Enum.Parse(typeof(KeyCode), value[i])));
-            keys.Add(key[i], (KeyCode)Enum.Parse(typeof(KeyCode), value[i]));
+            Keys.Add(key[i], (KeyCode)Enum.Parse(typeof(KeyCode), value[i]));
         }
     }
 
@@ -41,10 +41,10 @@ public class KeybindManager : MonoBehaviour
     // Update is called once per frame
     public string[] SendKey()
     {
-        string[] tempKey = new string[keys.Count];
+        string[] tempKey = new string[Keys.Count];
 
         int i = 0;
-        foreach (KeyValuePair<string, KeyCode> key in keys)
+        foreach (KeyValuePair<string, KeyCode> key in Keys)
         {
             tempKey[i] = key.Key;
             i++;
@@ -55,12 +55,12 @@ public class KeybindManager : MonoBehaviour
 
     public string[] SendValue()
     {
-        string[] tempValue = new string[keys.Count];
+        string[] tempValue = new string[Keys.Count];
 
         int i = 0;
-        foreach (KeyValuePair<string, KeyCode> key in keys)
+        foreach (KeyValuePair<string, KeyCode> key in Keys)
         {
-            tempValue[i] = keys.Values.ToString();
+            tempValue[i] = Keys.Values.ToString();
 
             i++;
         }
@@ -71,12 +71,12 @@ public class KeybindManager : MonoBehaviour
     {
         for (int i = 0; i < _actionMapData.Length; i++)
         {
-            if (!keys.ContainsKey(_actionMapData[i].actionName))
+            if (!Keys.ContainsKey(_actionMapData[i].actionName))
             {
-                keys.Add(_actionMapData[i].actionName, (KeyCode)Enum.Parse(typeof(KeyCode), _actionMapData[i].defaultKey));
+                Keys.Add(_actionMapData[i].actionName, (KeyCode)Enum.Parse(typeof(KeyCode), _actionMapData[i].defaultKey));
             }
 
-            _actionMapData[i].keycodeDisplay.text = keys[_actionMapData[i].actionName].ToString();
+            _actionMapData[i].keycodeDisplay.text = Keys[_actionMapData[i].actionName].ToString();
         }
 
     }
@@ -98,7 +98,7 @@ public class KeybindManager : MonoBehaviour
 
         if (_currentSelectedKey != null && changeKeyEvent.isKey)
         {
-            keys[_currentSelectedKey.name] = changeKeyEvent.keyCode;
+            Keys[_currentSelectedKey.name] = changeKeyEvent.keyCode;
 
             _currentSelectedKey.GetComponentInChildren<Text>().text = changeKeyEvent.keyCode.ToString();
             _currentSelectedKey.GetComponent<Image>().color = _changedKey;
