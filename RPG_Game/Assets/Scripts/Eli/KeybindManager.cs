@@ -12,7 +12,7 @@ public class KeybindManager : MonoBehaviour
     {
         public string actionName;
         public Text keycodeDisplay;
-        public string defultkey;
+        public string defaultKey;
     }
 
     [Header("Action Mapping")]
@@ -73,7 +73,7 @@ public class KeybindManager : MonoBehaviour
         {
             if (!keys.ContainsKey(_actionMapData[i].actionName))
             {
-                keys.Add(_actionMapData[i].actionName, (KeyCode)Enum.Parse(typeof(KeyCode), _actionMapData[i].defultkey));
+                keys.Add(_actionMapData[i].actionName, (KeyCode)Enum.Parse(typeof(KeyCode), _actionMapData[i].defaultKey));
             }
 
             _actionMapData[i].keycodeDisplay.text = keys[_actionMapData[i].actionName].ToString();
