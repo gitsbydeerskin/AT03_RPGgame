@@ -93,8 +93,9 @@ public class Player_Movement : MonoBehaviour
     void SpeedControls()
     {
         // checks if the player is pressing the sprint key, if they still have some stamina left and is moving
-       // if (Input.GetKey(KeybindManager.keys["Sprint"]) && playerHandler.playerData.stamina.currentValue > 0 && isMoving)
-       if(Input.GetKey(KeyCode.LeftShift) && playerHandler.playerData.stamina.currentValue > 0 && isMoving)
+        //if (Input.GetKey(KeybindManager.keys["Sprint"]) && playerHandler.playerData.stamina.currentValue > 0 && isMoving)
+        if (Input.GetKey(KeyCode.LeftShift) && playerHandler.playerData.stamina.currentValue > 0 && isMoving)
+
         {
             //if they are, then they start to move at the speed of running
             _movementSpeed = _run;
@@ -111,7 +112,7 @@ public class Player_Movement : MonoBehaviour
         }
         //checks if the player is pressing the crouch button
         //else if (Input.GetKey(KeybindManager.Keys["Crouch"])) 
-        else if(Input.GetKey(KeyCode.LeftControl))
+        else if (Input.GetKey(KeyCode.LeftControl))
         {
             //if so, the speed of the player when moving is the value that is set as crouch speed
             _movementSpeed = _crouch;
@@ -133,8 +134,8 @@ public class Player_Movement : MonoBehaviour
             if (_characterController.isGrounded)
             {
                 //checks if the player is pressing the button that makes them move left
-               // if (Input.GetKey(KeybindManager.Keys["Left"]))
-               if(Input.GetKey(KeyCode.A))
+                //if (Input.GetKey(KeybindManager.Keys["Left"]))
+                if (Input.GetKey(KeyCode.A))
                 {
                     //makes the player move left
                     newInput.x = -1;
@@ -144,7 +145,7 @@ public class Player_Movement : MonoBehaviour
                 //checks if the player pressed the button that makes them move right
                 //else if (Input.GetKey(KeybindManager.Keys["Right"]))
                 else if (Input.GetKey(KeyCode.D))
-                    {
+                {
                     //makes the player move right
                     newInput.x = 1;
                     //makes the variable show that the player is moving
@@ -158,8 +159,8 @@ public class Player_Movement : MonoBehaviour
                     isMoving = false;
                 }
                 //checks if the player pressed the button that makes the player move backwards
-                // if (Input.GetKey(KeybindManager.Keys["Backward"]))
-                if (Input.GetKey(KeyCode.S))
+                //if (Input.GetKey(KeybindManager.Keys["Backward"]))
+                if(Input.GetKey(KeyCode.S))
                 {
                     //makes the player move backward
                     newInput.y = -1;
@@ -167,8 +168,8 @@ public class Player_Movement : MonoBehaviour
                     isMoving = true;
                 }
                 //checks to see if the player pressed the button that makes them move forward
-                // else if (Input.GetKey(KeybindManager.Keys["Forward"]))
-                else if (Input.GetKey(KeyCode.W))
+                //else if (Input.GetKey(KeybindManager.Keys["Forward"]))
+                else if(Input.GetKey(KeyCode.W))
                 {
                     //makes the player move forward
                     newInput.y = 1;
@@ -189,8 +190,8 @@ public class Player_Movement : MonoBehaviour
                 //adjusts movement direction according to the movement speed of the player
                 _moveDirection *= _movementSpeed;
                 //checks to see if the player wants to jump
-                //  if (Input.GetKey(KeybindManager.Keys["Jump"]))
-                if (Input.GetKey(KeyCode.Space))
+                //if (Input.GetKey(KeybindManager.Keys["Jump"]))
+                if(Input.GetKey(KeyCode.Space))
                 {
                     //makes the player jump
                     _moveDirection.y = _jump;
