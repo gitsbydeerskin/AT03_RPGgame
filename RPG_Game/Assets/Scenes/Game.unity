@@ -408,7 +408,7 @@ MonoBehaviour:
   _crouch: 2.5
   _jump: 8
   _gravity: 20
-  uiManager: {fileID: 2113761988}
+  uiManager: {fileID: 832575519}
 --- !u!114 &225742430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,10 +421,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d52ecd13fbb6334cb1a7e9d96e1a5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData:
+    name: 
+    health:
+      currentValue: 0
+      maxValue: 0
+      value: 0
+    stamina:
+      currentValue: 100
+      maxValue: 100
+      value: 50
+    level: 0
+    experience:
+      currentValue: 0
+      maxValue: 0
+      value: 0
+    stats:
+    - name: STR
+      statValue: 12
+      value: 0
+    - name: DEX
+      statValue: 14
+      value: 0
+    - name: CON
+      statValue: 13
+      value: 0
+    - name: INT
+      statValue: 10
+      value: 0
+    - name: WIS
+      statValue: 11
+      value: 0
+    - name: CHA
+      statValue: 8
+      value: 0
   spawnPoint: {fileID: 355266962}
   timerValue: 0
   canHeal: 1
-  uiManager: {fileID: 2113761988}
+  uiManager: {fileID: 832575519}
 --- !u!114 &225742431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,9 +1102,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 832575518}
+  - component: {fileID: 832575519}
   m_Layer: 0
   m_Name: Manager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1090,6 +1125,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832575519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832575517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c76e35c82c05ae418678e8d44f607d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  staminaBar: {fileID: 0}
+  experienceBar: {fileID: 0}
 --- !u!4 &958218061
 Transform:
   m_ObjectHideFlags: 0
@@ -1412,59 +1462,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2113761987
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2113761989}
-  - component: {fileID: 2113761988}
-  m_Layer: 0
-  m_Name: 
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2113761988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113761987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c76e35c82c05ae418678e8d44f607d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  staminaBar: {fileID: 0}
-  experienceBar: {fileID: 0}
---- !u!4 &2113761989
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113761987}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.36, y: 1, z: 2.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 832575518}
-  - {fileID: 2113761989}
   - {fileID: 958218061}
   - {fileID: 355266962}
   - {fileID: 225742427}
