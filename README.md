@@ -87,6 +87,18 @@ For branches that focus on bug fixing, the branch naming convention should be:
 
 For branches that express a release version change, the branch naming convention should be:
 -`version/VersionNumber`<br>
+
+In special cases, the following prefixes should be added to the start of a Branch Name: 
+
+`TEST` is for Testing branches - testing new features together, fixes, etc. 
+Ex: TEST/feature/dialogue
+
+`OLD` is for abandoned features - keeping them for now as a backup, but we can delete them later. 
+Ex: OLD/feature/dialogue_system
+
+`ARCHIVE` is just because I'm not sure if that branch is actually cursed or not and I'm too lazy to check.
+Ex: ARCHIVE/feature/dlg_manager
+
 ### File Structure
 When structuring your files, keep it clear and simple, ensuring the structure makes sense to both yourself and your teammates. All files should be stored either on the GitHub repository, or on a company device.
 ### Commit Directions
@@ -113,6 +125,7 @@ Other file naming conventions involve:
 
 ###### Changelong 
 * 3/06/2025: Eli & Ethan - Eli added the 'Project Features' section. Ethan updated the 'Technical Specifications' to include Commit guidelines. 
-* 4/06/2025 @ 5:30PM : Bri - minor adjustments to formatting and grammatical/spelling fixes in the "Project Features" section. Creation of this Changelog section. Edited 'Commit naming convention' > 'Commit Naming Convention'. Edit to the project features section to make all points lower-case to make them uniform (some were uppercase, some were lowercase).  
+* 4/06/2025 @ 5:30PM : Bri - minor adjustments to formatting and grammatical/spelling fixes in the "Project Features" section. Creation of this Changelog section. Edited 'Commit naming convention' > 'Commit Naming Convention'. Edit to the project features section to make all points lower-case to make them uniform (some were uppercase, some were lowercase).
+* 11/06/2025 @ 1:30 : Bri - Added new naming prefixes to the Branch Naming Conventions. 
 
 
