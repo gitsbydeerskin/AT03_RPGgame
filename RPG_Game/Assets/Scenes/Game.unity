@@ -442,7 +442,6 @@ RectTransform:
   m_SizeDelta: {x: 101.0074, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &308914696
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
