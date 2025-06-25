@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 355266959}
   m_Layer: 0
   m_Name: HP Sphere
-  m_TagString: Untagged
+  m_TagString: Heal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1793,7 +1793,7 @@ GameObject:
   - component: {fileID: 1155679062}
   m_Layer: 0
   m_Name: DMG Sphere
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

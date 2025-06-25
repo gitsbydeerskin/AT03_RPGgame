@@ -56,6 +56,10 @@ public class PlayerHandler : MonoBehaviour
         {
             playerData.health.value *= 2;
         }
+        if (other.gameObject.CompareTag("Damage"))
+        {
+            DamagePlayer(10);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -69,11 +73,9 @@ public class PlayerHandler : MonoBehaviour
             spawnPoint = other.transform;
         }
     }
-    private void OnCollissionEnter(Collision collision)
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Damage"))
-        {
-            DamagePlayer(10);
-        }
+        HealOverTime();
+        Timer();
     }
 }
