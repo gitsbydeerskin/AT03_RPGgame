@@ -868,7 +868,7 @@ GameObject:
   - component: {fileID: 441624478}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -940,6 +940,7 @@ MonoBehaviour:
   timerValue: 0
   canHeal: 1
   uiManager: {fileID: 2113761988}
+  playerObject: {fileID: 0}
 --- !u!136 &441624472
 CapsuleCollider:
   m_ObjectHideFlags: 0
