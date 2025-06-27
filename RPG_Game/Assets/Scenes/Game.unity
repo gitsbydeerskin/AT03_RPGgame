@@ -914,27 +914,27 @@ MonoBehaviour:
       value: 1
     level: 1
     experience:
-      currentValue: 0
+      currentValue: 200
       maxValue: 100
       value: 1
     stats:
     - name: STR
-      statValue: 12
+      statValue: 1
       value: 0
     - name: DEX
-      statValue: 14
+      statValue: 1
       value: 0
     - name: CON
-      statValue: 13
+      statValue: 1
       value: 0
     - name: INT
-      statValue: 10
+      statValue: 1
       value: 0
     - name: WIS
-      statValue: 11
+      statValue: 1
       value: 0
     - name: CHA
-      statValue: 8
+      statValue: 1
       value: 0
   spawnPoint: {fileID: 355266962}
   timerValue: 0

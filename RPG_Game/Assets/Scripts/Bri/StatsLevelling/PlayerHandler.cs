@@ -76,6 +76,35 @@ public class PlayerHandler : MonoBehaviour
             }
         }
     }
+    void Experience()
+        // This handles levelling up for the character. 
+    {
+        if (playerData.experience.currentValue >= playerData.experience.maxValue)
+            // If the player's current experience is greater than the max value
+        {
+            playerData.level++;
+            // Increase the Player's Level. 
+            playerData.experience.currentValue -= playerData.experience.maxValue;
+            // Detract thheir Level value from the Max value (ie zero it)
+            playerData.experience.maxValue += 50;
+            // and increase the MaxValue by 50 so that it takes longer to level up next time. 
+
+            for (int i = 0; i < playerData.stats.Count; i++)
+                // For every Stat in the Stat Struct.
+            { 
+                Stat tempStat = playerData.stats[i];
+                tempStat.statValue++; 
+                // Create a tempStat and increase its value
+                playerData.stats[i] = tempStat;
+                // Each stat in playerData is equal to the value of our new tempStat. 
+                // This levels up every Stat in PlayerStats by 1. 
+            }
+            uiManager.UpdateUI(uiManager.experienceBar, playerData.experience.currentValue, playerData.experience.maxValue);
+            // Update the Experience bar to reflect the player's XP. 
+            Debug.Log("You've levelled up!");
+            // Show a message in debug log. 
+        }
+    }
 
     void Respawn()
     {
@@ -219,6 +248,7 @@ public class PlayerHandler : MonoBehaviour
         Timer();
         // Timer is called on Update to allow player to Heal. 
         // If Timer isn't called here, no Healing functions work. 
+        Experience();
     }
     #endregion
 
