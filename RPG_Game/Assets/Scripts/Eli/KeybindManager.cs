@@ -32,13 +32,16 @@ public class KeybindManager : MonoBehaviour
 
         for (int i = 0; i < key.Length; i++)
         {
+<<<<<<< Updated upstream:RPG_Game/Assets/Scripts/Eli/KeybindManager.cs
             // keys.Add(key[i], (KeyCode)Enum.Parse(typeof(KeyCode), value[i])));
             keys.Add(key[i], (KeyCode)Enum.Parse(typeof(KeyCode), value[i]));
+=======
+            Keys.Add(key[i], (KeyCode)Enum.Parse(typeof(KeyCode), value[i]));
+>>>>>>> Stashed changes:RPG_Game/Assets/Scripts/Eli/settings/KeybindManager.cs
         }
     }
 
 
-    // Update is called once per frame
     public string[] SendKey()
     {
         string[] tempKey = new string[keys.Count];
@@ -60,8 +63,12 @@ public class KeybindManager : MonoBehaviour
         int i = 0;
         foreach (KeyValuePair<string, KeyCode> key in keys)
         {
+<<<<<<< Updated upstream:RPG_Game/Assets/Scripts/Eli/KeybindManager.cs
             tempValue[i] = keys.Values.ToString();
 
+=======
+            tempValue[i] = key.Value.ToString();
+>>>>>>> Stashed changes:RPG_Game/Assets/Scripts/Eli/settings/KeybindManager.cs
             i++;
         }
         return tempValue;
