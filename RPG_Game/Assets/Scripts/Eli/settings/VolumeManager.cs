@@ -9,10 +9,6 @@ public class VolumeManager : MonoBehaviour
     public AudioMixer audioMixer;
     [Header("Volume Control Sliders")]
     [SerializeField] Slider[] _slider = new Slider[3];
-<<<<<<< Updated upstream:RPG_Game/Assets/Scripts/Eli/VolumeManager.cs
-    [SerializeField] Text[] _percentText = new Text[3];
-=======
->>>>>>> Stashed changes:RPG_Game/Assets/Scripts/Eli/settings/VolumeManager.cs
     [SerializeField] float[] _Volume = new float[3];
     [SerializeField] string[] _channelName = new string[3];
 
@@ -36,11 +32,6 @@ public class VolumeManager : MonoBehaviour
             _slider[i].value = VolumeControl[i];
 
             audioMixer.SetFloat(_channelName[i], VolumeControl[i]);
-<<<<<<< Updated upstream:RPG_Game/Assets/Scripts/Eli/VolumeManager.cs
-
-            _percentText[i].text = $"{Mathf.Clamp01((VolumeControl[i] + 80) / 100):P0}";
-=======
->>>>>>> Stashed changes:RPG_Game/Assets/Scripts/Eli/settings/VolumeManager.cs
         }
     }
 
@@ -48,9 +39,5 @@ public class VolumeManager : MonoBehaviour
     {
         VolumeControl[volumeID] = _slider[volumeID].value;
         audioMixer.SetFloat(_channelName[volumeID], _Volume[volumeID]);
-<<<<<<< Updated upstream:RPG_Game/Assets/Scripts/Eli/VolumeManager.cs
-        _percentText[volumeID].text = $"{Mathf.Clamp01((VolumeControl[volumeID] + 80) / 100):P0}";
-=======
->>>>>>> Stashed changes:RPG_Game/Assets/Scripts/Eli/settings/VolumeManager.cs
     }
 }
