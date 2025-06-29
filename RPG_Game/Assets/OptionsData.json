@@ -1,1 +1,1 @@
-{"Volume":[0.0,-39.0,0.0],"qualityLevel":0,"keyNames":["MoveForward","MoveBackward","MoveLeft","MoveRight","Jump","Sprint","Crouch","Interact","Pause"],"keyValues":["W","G","A","D","Space","LeftShift","LeftControl","E","Escape"],"isMouseInverted":false}
+{"Volume":[0.0,-26.0,0.0],"qualityLevel":0,"keyNames":["MoveForward","MoveBackward","MoveLeft","MoveRight","Jump","Sprint","Crouch","Interact","Pause"],"keyValues":["W","S","A","D","Space","LeftShift","LeftControl","E","Escape"],"isMouseInverted":false}
