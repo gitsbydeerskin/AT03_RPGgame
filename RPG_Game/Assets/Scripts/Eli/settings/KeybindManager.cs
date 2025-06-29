@@ -7,16 +7,16 @@ public class KeybindManager : MonoBehaviour
 {
 
 
-    [Serializable]
+    [Serializable] //holds data for each keybind
     public struct ActionMapData
     {
-        public string actionName;
-        public Text keycodeDisplay;
-        public string defaultKey;
+        public string actionName; //the name of each keybind
+        public Text keycodeDisplay; //the text that displays the assigned key
+        public string defaultKey; //the Default key as a string
     }
 
     [Header("Action Mapping")]
-    [SerializeField] ActionMapData[] _actionMapData;
+    [SerializeField] ActionMapData[] _actionMapData; //array of 
     [Header("UI Feedback")]
     [SerializeField] GameObject _currentSelectedKey;
     public static Dictionary<string, KeyCode> Keys = new Dictionary<string, KeyCode>();
