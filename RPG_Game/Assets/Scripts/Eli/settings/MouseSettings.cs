@@ -6,6 +6,8 @@ public class MouseSettings : MonoBehaviour
 {
     private static bool isInverted;
     [SerializeField] Toggle _invertedMouseToggle;
+
+
     public static bool IsInveted
     {
         set

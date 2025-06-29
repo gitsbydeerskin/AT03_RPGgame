@@ -32,13 +32,11 @@ public class KeybindManager : MonoBehaviour
 
         for (int i = 0; i < key.Length; i++)
         {
-            // keys.Add(key[i], (KeyCode)Enum.Parse(typeof(KeyCode), value[i])));
             Keys.Add(key[i], (KeyCode)Enum.Parse(typeof(KeyCode), value[i]));
         }
     }
 
 
-    // Update is called once per frame
     public string[] SendKey()
     {
         string[] tempKey = new string[Keys.Count];
@@ -60,8 +58,7 @@ public class KeybindManager : MonoBehaviour
         int i = 0;
         foreach (KeyValuePair<string, KeyCode> key in Keys)
         {
-            tempValue[i] = Keys.Values.ToString();
-
+            tempValue[i] = key.Value.ToString();
             i++;
         }
         return tempValue;
